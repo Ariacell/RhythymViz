@@ -6,4 +6,5 @@ cmake_install.cmake
 bin
 build
 
-direnv
+./flake.lock
+.direnv
