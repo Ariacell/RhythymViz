@@ -11,6 +11,9 @@ find_package(Vulkan REQUIRED)
 
 # OpenAL
 find_package(OpenAL REQUIRED)
+message(${OPENAL_FOUND})
+message(${OPENAL_INCLUDE_DIR})
+message(${OPENAL_LIBRARY})
 
 # GLFW
 find_package(glfw3 3.3 REQUIRED)
@@ -61,7 +64,7 @@ add_executable(VulkanAudioApp
 # Link libraries
 target_link_libraries(VulkanAudioApp
     Vulkan::Vulkan
-    OpenAL::OpenAL
+    ${OPENAL_LIBRARY}
     ${LIBSNDFILE_LIBRARIES}
     glfw
   )

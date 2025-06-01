@@ -21,7 +21,7 @@ private:
 
     void initWindow() {
       printf("%s\n", glfwGetVersionString());
-      glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_NULL);  
+    //   glfwInitHint(GLFW::GLFW_PLATFORM, GLFW::GLFW_PLATFORM_NULL);  
       if(!glfwInit()) {
           throw std::runtime_error("Failed to init GLFW");
         }
@@ -60,7 +60,7 @@ private:
             
             // Play an audio file when the user presses 'P'
             if (glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS) {
-                audioPlayer.playAudio("path_to_audio_file.wav");
+                audioPlayer.playAudio("sample1.wav");
             }
         }
     }
